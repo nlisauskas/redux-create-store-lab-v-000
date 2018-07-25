@@ -5,6 +5,10 @@ export default function createStore(reducer) {
       state = reducer(state, action);
       if (store) render()
     }
+
+    function getState() {
+      return state;
+    };
 }
 
 function render() {
